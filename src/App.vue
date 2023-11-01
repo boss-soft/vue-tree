@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { elementsStore } from '@/stores/elements.store';
-import HomeView from '@/views/main/home.view.vue';
+import HomeView from '@/views/home/home.view.vue';
 import { onMounted } from 'vue';
 
 const treeStore = elementsStore();
