@@ -1,3 +1,15 @@
-<div class="element-container">
+<div class="element" v-if="thisElement && thisElement.name!==''">
+  <div :style="{ paddingLeft: depth + 'em' }">
+    <img src="@/assets/folder.png" alt="folder" v-if="thisElement.type==='dir'" />
+    <img src="@/assets/file.png" alt="file" v-else />
 
+    {{ thisElement.name }}
+  </div>
+  <div v-if="thisElement.name">
+    <img src="@/assets/edit.png" alt="edit" class="btn" @click="rename" />
+    <img src="@/assets/delete.png" alt="delete" class="btn" @click="deleteThis" />
+  </div>
+</div>
+<div v-for="element in myLittleTree">
+  <element :id="element.id" :depth="depth+1" />
 </div>

@@ -11,7 +11,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="container">
+  <div
+    class="container"
+    v-if="treeStore.tree"
+  >
     <home-view></home-view>
   </div>
 </template>

@@ -7,6 +7,9 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+src/styles/main.css
+src/styles/main.css.map
+
 node_modules
 .DS_Store
 dist
